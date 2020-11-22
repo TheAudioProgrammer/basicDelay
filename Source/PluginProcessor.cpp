@@ -102,6 +102,7 @@ void BasicDelayAudioProcessor::prepareToPlay (double sampleRate, int samplesPerB
     juce::dsp::ProcessSpec spec;
     spec.maximumBlockSize = samplesPerBlock;
     spec.sampleRate = sampleRate;    
+    spec.numChannels = 2;
     
     delay.prepare (spec);
     linear.prepare (spec);
